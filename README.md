@@ -19,3 +19,15 @@ Pass the `CloudflareBindings` as generics when instantiation `Hono`:
 // src/index.ts
 const app = new Hono<{ Bindings: CloudflareBindings }>()
 ```
+
+
+## データベース設定
+```zsh
+npx wrangler d1 create posts-app
+```
+```zsh
+npx wrangler d1 execute posts-app --local --file=./schema.sql
+```
+```zsh
+npx wrangler d1 execute posts-app --remote --file=./schema.sql
+```
